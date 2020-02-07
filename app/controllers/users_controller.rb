@@ -13,7 +13,7 @@ class UsersController < ApplicationController
 
   def create
     user = User.new(user_params)
-    if User.save
+    if user.save
       render json:{status:"SUCCESS", message:"Created new user", data: user}, status: :ok
     else
       render json: user.errors, status: :unprocessable_entity

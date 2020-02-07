@@ -13,7 +13,7 @@
 
     def create
       game = Game.new(game_params)
-      if Game.save
+      if game.save
         render json:{status:"SUCCESS", message:"Created new game", data: game}, status: :ok
       else
         render json: game.errors, status: :unprocessable_entity

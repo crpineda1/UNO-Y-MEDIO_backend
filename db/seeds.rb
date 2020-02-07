@@ -5,3 +5,36 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+puts "destroy users"
+User.destroy_all
+
+puts "creating new users"
+
+User.create(name: "Cartman", password:"123")
+User.create(name: "Stan", password:"123")
+User.create(name: "Kyle", password:"123")
+User.create(name: "Kenny", password:"123")
+User.create(name: "user1", password:"123")
+
+puts "destroy games"
+Game.destroy_all
+
+puts "creating new games"
+
+Game.create()
+Game.create()
+Game.create()
+Game.create()
+
+puts "destroy user_games"
+UserGame.destroy_all
+
+puts "creating new user_games"
+
+UserGame.create(user_id:1, game_id:1, win: true, points: 100)
+UserGame.create(user_id:2, game_id:2, win: false, points: 0)
+UserGame.create(user_id:3, game_id:3, win: true, points: 200)
+
+
