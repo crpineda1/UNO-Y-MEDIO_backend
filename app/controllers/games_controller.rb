@@ -23,7 +23,7 @@
     private
 
     def game_params
-      params.require(:game).permit(:id)
+      params.require(:game).permit(:user_id, :game_id)
     end
 
   end
