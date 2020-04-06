@@ -34,7 +34,7 @@ UserGame.destroy_all
 puts "creating new user_games"
 
 UserGame.create(user_id:1, game_id:1, win: true, points: 100)
-UserGame.create(user_id:2, game_id:2, win: false, points: 0)
+UserGame.create(user_id:2, game_id:2, win: true, points: 400)
 UserGame.create(user_id:3, game_id:3, win: true, points: 200)
 
 
